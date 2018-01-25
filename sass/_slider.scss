@@ -1,0 +1,95 @@
+.slider {
+    position: relative;
+}
+
+.slide {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 540px;
+  margin: .5rem;
+}
+
+.slide1 {
+  background-image: url("../img/owl.jpg");
+}
+.slide2 {
+  background-image: linear-gradient(
+    //    to right bottom,
+       rgba(0, 0, 0, 0.5),
+       rgba(0, 0, 0, 0.5)),
+        url("../img/rail.jpg");
+}
+.slide3 {
+  background-image: url("../img/clock.jpg");
+}
+
+.slide-content {
+    position: absolute;
+    top: 40px;
+    left: 60px;
+}
+
+.slide-content__heading {
+  font-size: 4rem;
+  color: #fff;
+  font-weight: 100;
+}
+
+.slide-content__text {
+    font-size: 1rem;
+    color: #fff;
+    max-width: 25rem;
+    line-height: 1.6rem;
+    padding: 1.5rem 0;
+  }
+
+.arrow {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  margin-top: -30px;
+  
+  width: 40px;
+  height: 60px;
+  background-color: #fff;
+
+}
+
+#arrow-left {
+  left: .5rem;
+  border-radius: 0 5px 5px 0;
+
+}
+
+#arrow-right {
+  right: .5rem;
+  border-radius: 5px 0 0 5px;
+
+}
+
+.slider__icon {
+    font-size: 1.8rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $blacktext;
+}
+
+.btn {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    padding: 1rem 1.5rem;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 2px;
+    color: white;
+    cursor: pointer;
+    &:hover {
+        transform: scale(1.1);
+    }
+    &:active {
+        transform: translateY(.1rem);
+    }
+}

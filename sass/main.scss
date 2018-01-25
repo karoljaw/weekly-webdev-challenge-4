@@ -1,0 +1,276 @@
+@import "veriables";
+@import "global";
+@import "nav";
+@import "slider";
+
+
+.main {
+    display: flex;
+}
+
+.left-col {
+    margin: .5rem;
+    display: flex;
+    &::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+
+.left-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 50%;
+}
+
+.links {
+    background-color: white;
+    flex: 1;
+    &--grey {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 0;
+        background-color: $grey;
+    }
+}
+
+.item {
+    border-bottom: 1px solid $grey;
+    text-decoration: none;
+    padding: 10px;
+    display: flex;
+    &:hover {
+        background-color: $green;
+        cursor: pointer;
+        & > .item__icon,
+        > .item__text {
+            color: white;
+        }
+    }
+    &--no-border {
+        border: none;
+    }
+}
+
+.item__icon {
+    font-size: 1.5rem;
+    color: $grey;
+    flex: 2;
+    text-align: center;
+    &--white {
+        color: white;
+    }
+}
+
+.item__text {
+    flex: 5;
+   padding: 5px 0 0 5px;
+   text-decoration: none;
+   font-size: 1.2rem;
+   color: $blacktext;
+   &--white {
+    color: white;
+    font-size: .9rem;
+}
+}
+
+.right-side {
+    display: flex;
+    flex-direction: column;
+    min-width: 50%;
+}
+
+.box {
+    flex: 1;
+    background-color: $neonBlue;
+    color: white;
+    position: relative;
+    padding: 1rem;
+    &:hover {
+        background-color: lighten($neonBlue, 10%);
+    }
+    &:not(:first-child) {
+        border-top: 1px solid $grey;
+    }
+}
+
+.box__item {
+    font-size: 1rem;
+    padding-top: .6rem;
+    cursor: pointer;
+    display: block;
+    &:first-child {
+        padding: .1rem 0;
+    }
+    &:hover {
+        color: $green;
+    }
+
+}
+
+.box__item:hover + .green-icon {
+    color: white;
+}
+
+.box__item:first-child {
+    font-size: 1.1rem;
+    color: $green;
+    &:hover {
+        color: white;
+    }
+}
+
+.green-icon {
+    position: absolute;
+    top: 1.2rem;
+    right: 1rem;
+    font-size: 1.2rem;
+    color: $green;
+    cursor: pointer;
+}
+
+.right-col {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.right-links {
+    padding: 1rem;
+    background-color: white;
+    flex: 1;
+    margin: .5rem;
+}
+
+.media {
+    position: relative;
+    flex: 1;
+    margin: .5rem;
+    padding: 1rem;
+    color: white;
+    font-weight: 100;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.media__facebook {
+    background-color: $facebookBlue;
+    &:hover {
+        background-color: darken($facebookBlue, 10%);
+    }
+}
+
+.media__twitter {
+    background-color: $twitterBlue;
+    &:hover {
+        background-color: darken($twitterBlue, 10%);
+    }
+}
+
+.media__icon {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+
+.media__number {
+    position: absolute;
+    left: 1rem;
+    bottom: 1.1rem;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.media__follow {
+    position: absolute;
+    bottom: 1.1rem;
+    right: 3rem;
+    font-size: 1rem;
+}
+
+.media__icon--follow {
+    font-size: 1.4rem;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+
+.sign {
+    width: 100%;
+    padding: 1rem;
+    background-color: white;
+    margin: .5rem;
+}
+
+.sign__heading {
+    text-align: center;
+    font-size: 1.4rem;
+    margin-bottom: .6rem;
+}
+
+.sign__paragraph {
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.socialmedia {
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+}
+
+.item__icon--sign {
+    font-size: 2rem;
+    margin: 0 1rem;
+    cursor: pointer;
+    &:hover {
+        transform: scale(1.5);
+    }
+}
+
+.facebook-icon:hover {
+    color: $facebookBlue;
+}
+
+.twitter-icon:hover {
+    color: $twitterBlue;
+}
+
+.googleplus-icon:hover,
+.linkedin-icon:hover {
+    color: $buttonRed;
+}
+
+.form-group {
+    display: flex;
+}
+
+.input {
+    flex: 1;
+    padding: .6rem;
+    color: $grey;
+}
+
+::-webkit-input-placeholder {
+    font-size: 1rem;
+}
+
+.submit {
+    padding: .5rem 1.1rem;
+    margin-left: 1rem;
+    color: white;
+    background-color: $buttonRed;
+    border: none;
+    cursor: pointer;
+    border-radius: 2px;
+}
