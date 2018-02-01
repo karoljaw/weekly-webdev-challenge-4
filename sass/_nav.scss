@@ -5,7 +5,7 @@
     display: flex;
     justify-content: space-between;
     align-content: center;
-    align-items: center;
+    align-items: stretch;
     color: $blacktext;
     position: relative;
 }
@@ -18,41 +18,38 @@
     &__item {
         list-style-type: none;
         padding: 20px;
-    &:hover {
-        color: $green;
-        cursor: pointer;
-    }
+        &:hover {
+            color: $green;
+            cursor: pointer;
+        }
     }
 }
 
 .icon-box {
     border-right: 1px solid $grey;
     border-left: 1px solid $grey;
-    padding: 0 10px;
+
+    & .icon {
+            width: 1.2rem; 
+    }   
 }
 
-.icon-box .icon {
-    padding: 20px 8px;
-}
 
-
-.icon {    
-    font-size: 1.2rem;
+.icon {
+    box-sizing: content-box;
+    width: 2em;
     height: 100%;
-    padding: 20px;
-    color: $grey;
+    padding: 0 15px;
+    fill: $grey;
     cursor: pointer;
-    &:hover {
-        color: $green;
-    }
+    transition: .3s;
+  }
+
+.icon-menu {
+    width: 3em;
 }
 
-.icon--menu {
-    height: 100%;
-    width: 60px;
-    padding: 16px;
-    &:hover {
-        background-color: $green;
-        color: white;
-    }
+.icon:hover {
+    background-color: $green;
+    fill: white;
 }
