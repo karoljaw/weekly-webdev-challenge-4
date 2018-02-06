@@ -1,5 +1,12 @@
 .slider {
     position: relative;
+    display: none;
+}
+
+@media(min-width: 800px) {
+  .slider{
+     display: block;  
+  }
 }
 
 .slide {
@@ -59,22 +66,22 @@
 #arrow-left {
   left: .5rem;
   border-radius: 0 5px 5px 0;
-
 }
 
 #arrow-right {
   right: .5rem;
   border-radius: 5px 0 0 5px;
-
 }
 
-.slider__icon {
-    font-size: 1.8rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: $blacktext;
+.icon-chevron-thin-left,
+.icon-chevron-thin-right {
+  width: 1.3rem;
+  height: 1.3rem;
+  fill: $blacktext;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .btn {
@@ -86,8 +93,9 @@
     border-radius: 2px;
     color: white;
     cursor: pointer;
+    outline: none;
     &:hover {
-        transform: scale(1.1);
+        transform: translateY(-0.1rem);
     }
     &:active {
         transform: translateY(.1rem);
